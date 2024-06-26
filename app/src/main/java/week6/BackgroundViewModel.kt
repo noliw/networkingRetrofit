@@ -1,10 +1,13 @@
 package week6
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.work.Constraints
 import androidx.work.Data
 import androidx.work.OneTimeWorkRequest
+import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import com.example.networkingretrofit.debugLog
@@ -93,6 +96,23 @@ class BackgroundWorkViewModel @Inject constructor(
             }
         }
     }
+
+    // This annotation ensures the code runs only on Android O (Oreo) and above
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun schedulePeriodicWork() {
+        // Create a periodic work request to run LogWorkerWithCustomization every 15 minutes
+        val workRequest = PeriodicWorkRequest.Builder(
+            LogWorkerWithCustomization::class.java, // The worker class that will perform the task
+            15, // The repeat interval
+            TimeUnit.MINUTES // The time unit for the interval
+        )
+            .setInitialDelay(5, TimeUnit.SECONDS) // Optional: Delay before the first run
+            .build() // Build the work request
+
+        // Enqueue the work request to the WorkManager
+        workManager.enqueue(workRequest)
+    }
+
 
 
 }
