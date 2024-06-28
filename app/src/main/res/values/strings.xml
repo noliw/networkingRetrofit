@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">networkingRetrofit</string>
+    <string name="writing_paragraphs">Writing Paragraphs</string>
+    <string name="paragraph_description">"\n                Rated #1 Best AI Detector by Forbes! Use our AI detector to check if your text will be \n                flagged as AI-written content. Then, click 'humanize' to remove AI detection and ensure your \n                text will bypass all major AI detectors. \n                Our AI text humanizer does this by enhancing your content to match the quality of human writing.\n            "</string>
+    <string name="Click">Humanize</string>
 </resources>

@@ -1,4 +1,4 @@
-package week6
+package com.example.networkingretrofit.week6.background_work
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -46,9 +46,9 @@ fun BackgroundWorkScreen(
                 Text(text = "Schedule periodic work")
             }
 
-            Button(onClick = { backgroundWorkViewModel.scheduleImageUploadWork() }) {
-                Text(text = "Schedule image upload work")
-            }
+//            Button(onClick = { backgroundWorkViewModel.scheduleImageUploadWork() }) {
+//                Text(text = "Schedule image upload work")
+//            }
         }
     }
 }

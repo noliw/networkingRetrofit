@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">networkingRetrofit</string>
+    <string name="writing_paragraphs">አንቀጾችን በመጻፍ ላይ</string>
+    <string name="paragraph_description">"ደረጃ የተሰጠው #1 በፎርብስ ምርጥ AI መርማሪ! ጽሑፍዎ መሆን አለመሆኑን ለማረጋገጥ የእኛን AI ማወቂያ ይጠቀሙ "</string>
+    <string name="Click">ሰብኣዊ መሰላት</string>
+</resources>
